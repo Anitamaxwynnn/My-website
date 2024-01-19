@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Personal website</title>
+ <style>
+ @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+ body {
+ margin: 10px;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Oswald', sans-serif;
+ color: #black;
+ background: url('bgd.gif') no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+ h1 {
+ text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
+
+ header {
+ position: relative;
+ background-color: #BBBBBB;
+ height: 60px;
+ padding: 30px;
+ text-align: left;
+ }
+
+ .center {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ }
+
+ nav {
+ position: absolute;
+ right: 0;
+ top: 50%;
+ transform: translateY(-50%);
+ }
+
+ nav ul {
+ list-style-type: none;
+ padding: 0;
+ }
+
+ nav ul li {
+ display: inline;
+ margin-right: 10px;
+ }
+
+ nav ul li a {
+ text-decoration: none;
+ color: white;
+ background-color: black;
+ padding: 10px 20px;
+ font-family: 'Oswald', sans-serif;
+ }
+
+ section {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: row;
+ }
+
+ section img {
+ margin-right: 20px;
+ width: 400px;
+ padding: 20px;
+ }
+
+ section p {
+ text-align: center;
+ }
+
+ section {
+  display: none;
+ }
+
+
+ #home {
+  display: block;
+ }
+	.social-icons {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 10px;
+}
+
+.social-icons a img {
+   width: 50px;
+   height: 50px;
+}
+ #contact {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+
+ #contact input, #contact textarea {
+ margin: 20px;
+ padding: 20px;
+ width: 300px;
+ }
+
+ #contact button {
+ padding: 20px 20px;
+ cursor: pointer;
+ }
+section p, section p1 {
+     color: white; 
+ }
+
+ 
+ section h1, section h2, section h3, section h4, section h5, section h6, section a {
+     color: white;
+ }
+.box {
+   border: 3px solid black;
+   padding: 100px;
+   margin: 20px;
+}
+
+#about {
+    display: flex;
+    flex-direction: column; 
+}
+
+#about .box {
+    background-color: rgba(255, 255, 255, 0.5); 
+    width: 50%;
+    margin: 0 auto; 
+    box-sizing: border-box;
+    padding: 30px;
+}
+#about .box img {
+    width: 93%; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 30px; /* Add space below the image */
+}
+ </style>
+</head>
+<body>
+ <header>
+ <h1>MY PORTFOLIO</h1>
+ 
+ <nav>
+    <ul>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('about')">About</a></li>
+        <li><a href="#" onclick="showSection('resume')">Resume</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+ </nav>
+ </header>
+ <main>
+ <section id="home">
+    <img src="me.jpg" alt="Home Image">
+    <p>Hi I am John Christopher Rocafort.</p> &nbsp;&nbsp;
+    <p>Welcome to my Personal Website!</p>
+</section>
+ <section id="about">
+<img src="aboutme.jpg" alt="About Image">
+    <p>Hi, I am John Christopher Rocafort.</p>
+    <p>This is the about section. Here, you can learn more about me.</p>
+    <div class="box">
+	<p>INTRODUCTION</p>
+        <p>Hello! I am a 20-year-old student in my second year at National University.
+Welcome to my world!</p>
+    </div>
+    <div class="box">
+	<p>INTEREST</p>
+        <img src="jdm.jpg" alt="Image for Box 1"> 
+        <p>"I'm really into JDM cars because of their unique blend of performance, style, and reliability. The engineering precision and attention to detail in Japanese domestic market vehicles have always appealed to me. I love the iconic models that have become legends in the automotive world, like the Nissan Skyline GT-R, Toyota Supra, and the Mitsubishi Lancer Evolution 3 (Evo 3). The tuner culture around JDM cars is also a big draw for me—I enjoy the potential for upgrades and modifications. Plus, there's something about the design aesthetics that sets JDM cars apart. The racing heritage and the exclusive models that aren't widely available outside of Japan, like the Evo 3, add to the overall allure. It's not just about the cars themselves; it's about the entire culture and history that comes with them."</p>
+    </div>
+    <div class="box">
+	<p>HOBBIES</p>
+        <img src="drive.jpg" alt="Image for Box 2"> 
+	<p>"I absolutely love driving because it's more than just a means of transportation for me; it's an experience. The feeling of being behind the wheel, the hum of the engine, the grip of the steering wheel—I find it incredibly exhilarating. There's a sense of freedom and control that comes with navigating the open road. Whether it's the thrill of acceleration, the satisfaction of taking a perfectly executed corner, or simply enjoying the scenery on a long drive, each moment behind the wheel is unique. It's a way for me to clear my mind, unwind, and just enjoy the pure joy of driving. The connection between the driver and the machine, the road beneath the tires—it's a passion that goes beyond getting from point A to point B. It's about embracing the journey and savoring every moment on the road."</p>
+	<img src="carwash.jpg" alt="Image for Box 2"> 
+        <p>I really love car washing—it's more than just keeping my car clean; it's a therapeutic and rewarding experience. There's something about the process of carefully washing, detailing, and pampering my car that brings me joy. It's a hands-on activity that allows me to connect with my vehicle, paying attention to every curve and surface. The satisfaction of seeing the dirt and grime wash away, revealing the shine of the paint, is incredibly rewarding.</p>
+	<img src="videogames.jpg" alt="Image for Box 3">
+	<p>"I love playing video games because they offer a unique blend of entertainment, challenge, and immersion. It's a way for me to unwind and escape into different worlds, whether I'm exploring vast landscapes, solving intricate puzzles, or engaging in intense multiplayer battles. The storytelling in many games is as captivating as movies or books, and I enjoy being an active participant in these narratives. There's also a sense of accomplishment that comes with overcoming in-game challenges or achieving goals. Whether I'm playing solo or with friends, the social aspect adds another layer of enjoyment. Gaming is not just a hobby for me; it's a dynamic and interactive form of entertainment that allows me to experience creativity, skill, and camaraderie in a virtual setting."</p>
+    </div>
+ </section>
+ <section id="resume">
+    <img src="Resume.jpg" alt="Resume Image">
+   <p>
+                        Click <a href="CV.pdf" download class="btn btn-color-download">here</a> to
+                        download the PDF File of My Resume.
+                    </p>
+ </section>
+ <section id="contact">
+ <input type="text" id="yourName" placeholder="Your Name">
+ <textarea id="yourMessage" placeholder="Your Message"></textarea>
+ <button id="submitBtn">Submit</button>
+ <div class="social-icons">
+    <a href="https://www.facebook.com/usernamn17/" target="_blank"><img src="fb.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/rrcfith/" target="_blank"><img src="ig.png" alt="Instagram"></a>
+    <a href="https://johnchristopherrocafort@gmail.com/" target="_blank"><img src="gmail.jpg" alt="Gmail"></a>
+ </div>
+ <p>(+639636424726)</p>
+ <p>rocafortjc@students.nu-fairview.edu.ph</p>
+ <p>Made by: John Christopher C. Rocafort</p>
+ </section>
+ </main>
+ <script>
+ function showSection(sectionId) {
+   var sections = document.getElementsByTagName('section');
+   for (var i = 0; i < sections.length; i++) {
+       sections[i].style.display = 'none';
+   }
+   document.getElementById(sectionId).style.display = 'flex';
+ }
+ document.getElementById('submitBtn').addEventListener('click', function() {
+    var yourName = document.getElementById('yourName').value;
+    var yourMessage = document.getElementById('yourMessage').value;
+    if (!yourName || !yourMessage) {
+        alert("Please fill in all fields.");
+    } else {
+        alert("Thank you!");
+    }
+ });
+ </script>
+</body>
+</html>
