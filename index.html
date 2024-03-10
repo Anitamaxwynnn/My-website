@@ -17,6 +17,14 @@
  -o-background-size: cover;
  background-size: cover;
 }
+#register {
+    background: url('loading.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #FFFFFF; /* Change the text color if needed for better visibility */
+}
  h1 {
  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
  }
@@ -79,14 +87,14 @@
  }
 
  section {
-  display: none;
+ display: none;
  }
 
 
  #home {
-  display: block;
+ display: block;
  }
-	.social-icons {
+ .social-icons {
    display: flex;
    justify-content: space-around;
    margin-top: 10px;
@@ -113,12 +121,12 @@
  cursor: pointer;
  }
 section p, section p1 {
-     color: white; 
+     color: #F7F9F9; 
  }
 
  
  section h1, section h2, section h3, section h4, section h5, section h6, section a {
-     color: white;
+     color: #F7F9F9;
  }
 .box {
    border: 3px solid black;
@@ -155,12 +163,27 @@ section p, section p1 {
         <li><a href="#" onclick="showSection('about')">About</a></li>
         <li><a href="#" onclick="showSection('resume')">Resume</a></li>
         <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li> <!-- Logout Button -->
     </ul>
  </nav>
  </header>
  <main>
+ <!-- Registration Section -->
+ <section id="register">
+    <h2>Registration</h2>
+    <form id="registrationForm">
+        <input type="text" id="registerName" placeholder="Your Name" required>
+        <input type="email" id="registerEmail" placeholder="Your Email" required>
+        <button type="submit">Register</button>
+    </form>
+    <!-- Loading GIF Container -->
+    <div id="loading" style="display: none;">
+        <img src="loading.gif" alt="Loading...">
+    </div>
+ </section>
+
  <section id="home">
-    <img src="me.jpg" alt="Home Image">
+<img src="me.jpg" alt="Home Image">
     <p>Hi I am John Christopher Rocafort.</p> &nbsp;&nbsp;
     <p>Welcome to my Personal Website!</p>
 </section>
@@ -169,23 +192,23 @@ section p, section p1 {
     <p>Hi, I am John Christopher Rocafort.</p>
     <p>This is the about section. Here, you can learn more about me.</p>
     <div class="box">
-	<p>INTRODUCTION</p>
+ <p>INTRODUCTION</p>
         <p>Hello! I am a 20-year-old student in my second year at National University.
 Welcome to my world!</p>
     </div>
     <div class="box">
-	<p>INTEREST</p>
+ <p>INTEREST</p>
         <img src="jdm.jpg" alt="Image for Box 1"> 
         <p>"I'm really into JDM cars because of their unique blend of performance, style, and reliability. The engineering precision and attention to detail in Japanese domestic market vehicles have always appealed to me. I love the iconic models that have become legends in the automotive world, like the Nissan Skyline GT-R, Toyota Supra, and the Mitsubishi Lancer Evolution 3 (Evo 3). The tuner culture around JDM cars is also a big draw for me—I enjoy the potential for upgrades and modifications. Plus, there's something about the design aesthetics that sets JDM cars apart. The racing heritage and the exclusive models that aren't widely available outside of Japan, like the Evo 3, add to the overall allure. It's not just about the cars themselves; it's about the entire culture and history that comes with them."</p>
     </div>
     <div class="box">
-	<p>HOBBIES</p>
+ <p>HOBBIES</p>
         <img src="drive.jpg" alt="Image for Box 2"> 
-	<p>"I absolutely love driving because it's more than just a means of transportation for me; it's an experience. The feeling of being behind the wheel, the hum of the engine, the grip of the steering wheel—I find it incredibly exhilarating. There's a sense of freedom and control that comes with navigating the open road. Whether it's the thrill of acceleration, the satisfaction of taking a perfectly executed corner, or simply enjoying the scenery on a long drive, each moment behind the wheel is unique. It's a way for me to clear my mind, unwind, and just enjoy the pure joy of driving. The connection between the driver and the machine, the road beneath the tires—it's a passion that goes beyond getting from point A to point B. It's about embracing the journey and savoring every moment on the road."</p>
-	<img src="carwash.jpg" alt="Image for Box 2"> 
+ <p>"I absolutely love driving because it's more than just a means of transportation for me; it's an experience. The feeling of being behind the wheel, the hum of the engine, the grip of the steering wheel—I find it incredibly exhilarating. There's a sense of freedom and control that comes with navigating the open road. Whether it's the thrill of acceleration, the satisfaction of taking a perfectly executed corner, or simply enjoying the scenery on a long drive, each moment behind the wheel is unique. It's a way for me to clear my mind, unwind, and just enjoy the pure joy of driving. The connection between the driver and the machine, the road beneath the tires—it's a passion that goes beyond getting from point A to point B. It's about embracing the journey and savoring every moment on the road."</p>
+ <img src="carwash.jpg" alt="Image for Box 2"> 
         <p>I really love car washing—it's more than just keeping my car clean; it's a therapeutic and rewarding experience. There's something about the process of carefully washing, detailing, and pampering my car that brings me joy. It's a hands-on activity that allows me to connect with my vehicle, paying attention to every curve and surface. The satisfaction of seeing the dirt and grime wash away, revealing the shine of the paint, is incredibly rewarding.</p>
-	<img src="videogames.jpg" alt="Image for Box 3">
-	<p>"I love playing video games because they offer a unique blend of entertainment, challenge, and immersion. It's a way for me to unwind and escape into different worlds, whether I'm exploring vast landscapes, solving intricate puzzles, or engaging in intense multiplayer battles. The storytelling in many games is as captivating as movies or books, and I enjoy being an active participant in these narratives. There's also a sense of accomplishment that comes with overcoming in-game challenges or achieving goals. Whether I'm playing solo or with friends, the social aspect adds another layer of enjoyment. Gaming is not just a hobby for me; it's a dynamic and interactive form of entertainment that allows me to experience creativity, skill, and camaraderie in a virtual setting."</p>
+ <img src="videogames.jpg" alt="Image for Box 3">
+ <p>"I love playing video games because they offer a unique blend of entertainment, challenge, and immersion. It's a way for me to unwind and escape into different worlds, whether I'm exploring vast landscapes, solving intricate puzzles, or engaging in intense multiplayer battles. The storytelling in many games is as captivating as movies or books, and I enjoy being an active participant in these narratives. There's also a sense of accomplishment that comes with overcoming in-game challenges or achieving goals. Whether I'm playing solo or with friends, the social aspect adds another layer of enjoyment. Gaming is not just a hobby for me; it's a dynamic and interactive form of entertainment that allows me to experience creativity, skill, and camaraderie in a virtual setting."</p>
     </div>
  </section>
  <section id="resume">
@@ -208,6 +231,7 @@ Welcome to my world!</p>
  <p>rocafortjc@students.nu-fairview.edu.ph</p>
  <p>Made by: John Christopher C. Rocafort</p>
  </section>
+
  </main>
  <script>
  function showSection(sectionId) {
@@ -217,15 +241,49 @@ Welcome to my world!</p>
    }
    document.getElementById(sectionId).style.display = 'flex';
  }
- document.getElementById('submitBtn').addEventListener('click', function() {
-    var yourName = document.getElementById('yourName').value;
-    var yourMessage = document.getElementById('yourMessage').value;
-    if (!yourName || !yourMessage) {
+
+ document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    var registerName = document.getElementById('registerName').value;
+    var registerEmail = document.getElementById('registerEmail').value;
+    if (!registerName || !registerEmail) {
         alert("Please fill in all fields.");
     } else {
-        alert("Thank you!");
+        // Show the loading GIF
+        document.getElementById('loading').style.display = 'block';
+        // Simulate a registration process
+        registerUser(registerName, registerEmail);
     }
  });
+
+ // Simulate a registration process
+ function registerUser(name, email) {
+    // Here, you would typically send the data to a server.
+    // This is a placeholder for such functionality.
+    console.log("Registering user with name:", name, "and email:", email);
+    
+    // Simulate server response delay
+    setTimeout(function() {
+        document.getElementById('loading').style.display = 'none';
+        // Display a confirmation message or transition to another section
+        alert("Thank you for registering, " + name + "!");
+        showSection('home'); // Show home section after registration
+    }, 3000); // 3 seconds delay
+ }
+
+ // Function to handle logout action
+ function logout() {
+    // Hide all sections
+    var sections = document.getElementsByTagName('section');
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+    }
+    // Show the registration section
+    document.getElementById('register').style.display = 'flex';
+ }
+
+ // Initially show the registration section
+ showSection('register');
  </script>
 </body>
 </html>
